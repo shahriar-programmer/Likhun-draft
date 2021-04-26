@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #6e45e3;
+  width: 100%;
+}
+header .container .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  flex-wrap: wrap;
+}
+header .container .navbar .logo img {
+  max-height: 36px;
+  height: auto;
+}
+header .container .navbar .hamburger {
+  display: none;
+}
+header .container .navbar .hamburger i {
+  color: white;
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 810px) {
+  header .container .navbar .hamburger {
+    display: block;
+  }
+}
+header .container .navbar .nav {
+  transition: all 0.2s;
+}
+@media screen and (max-width: 810px) {
+  header .container .navbar .nav {
+    display: none;
+  }
+}
+header .container .navbar .nav ul {
+  display: flex;
+  list-style-type: none;
+}
+header .container .navbar .nav ul li {
+  padding: 0.5rem 1.6rem;
+  transition: all 0.2s;
+  border-radius: 4px;
+}
+header .container .navbar .nav ul li:hover {
+  background-color: rgba(240, 240, 240, 0.2);
+  cursor: pointer;
+}
+header .container .navbar .nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+header .container .navbar .show-nav {
+  z-index: 100;
+  display: block;
+  position: absolute;
+  top: 10vh;
+  width: 100%;
+  height: 100%;
+  background-color: #6e45e3;
+  left: 0;
+  right: 0;
+  padding: 4rem 0;
+}
+header .container .navbar .show-nav ul {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2rem;
+}
+main {
+  margin-bottom: 2rem;
+}
+main .hero {
+  background-color: #6e45e3;
+  text-align: center;
+  color: white;
+  padding: 4rem 0;
+  padding-bottom: 6rem;
+}
+main .hero .container {
+  padding: 0 8rem;
+}
+@media screen and (max-width: 720px) {
+  main .hero .container {
+    padding: 0;
+    font-size: 10px;
+  }
+}
+main .hero .container .hero-header {
+  font-size: 3em;
+  line-height: 1.4;
+}
+main .hero .container .hero-subheader {
+  font-size: 1.5em;
+  width: 80%;
+  margin: 0 auto;
+}
+main .writing-panel .container .writing-wall {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+main .writing-panel .container .writing-wall .writing-header {
+  font-size: 2rem;
+  margin: 2rem;
+}
+main .writing-panel .container .writing-wall .writing-bg {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+@media screen and (max-width: 700px) {
+  main .writing-panel .container .writing-wall .writing-bg {
+    flex-direction: column;
+  }
+}
+main .writing-panel .container .writing-wall .writing-bg .singular-bg {
+  height: 260px;
+  width: 33%;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+@media screen and (max-width: 700px) {
+  main .writing-panel .container .writing-wall .writing-bg .singular-bg {
+    width: 100%;
+  }
+}
+main .writing-panel .container .writing-wall .writing-bg .singular-bg img {
+  width: 100%;
+  height: 100%;
+}
+main .writing-panel .container .writing-wall .writing-bg .singular-bg .singular-bg-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .writing-panel .container .writing-wall .writing-bg .singular-bg .singular-bg-overlay button {
+  border: none;
+  text-decoration: none;
+  color: white;
+  font-size: 1.4em;
+  padding: 0.6rem 1.4rem;
+  background-color: #6e45e3;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+main .writing-panel .container .writing-wall .writing-bg .singular-bg .singular-bg-overlay button:hover {
+  box-shadow: 4px 4px black;
+  transform: scale(1.05);
+}
+main .writing-panel .container .writing-wall .writing-bg .singular-bg:hover .singular-bg-overlay {
+  opacity: 1;
+}
+main .publishing-panel .container {
+  text-align: center;
+}
+main .publishing-panel .container .publishing-header {
+  font-size: 2em;
+  margin: 2rem 0;
+}
+main .publishing-panel .container .publishing-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+main .publishing-panel .container .publishing-container .publish-box {
+  position: relative;
+  width: 300px;
+  height: 200px;
+}
+@media screen and (max-width: 790px) {
+  main .publishing-panel .container .publishing-container .publish-box {
+    width: 100%;
+  }
+}
+main .publishing-panel .container .publishing-container .publish-box img {
+  height: 100%;
+  width: 100%;
+}
+main .publishing-panel .container .publishing-container .publish-box .publish-overlay {
+  background-color: rgba(240, 240, 240, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+}
+main .publishing-panel .container .publishing-container .publish-box .publish-overlay .publish-msg {
+  align-self: flex-start;
+  text-align: left;
+  font-size: 1.2em;
+  line-height: 1.4;
+  letter-spacing: 1.4;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Firefox */
+}
+main .publishing-panel .container .publishing-container .publish-box .publish-overlay .publish-msg::-webkit-scrollbar {
+  display: none;
+  /* Safari and Chrome */
+}
+main .publishing-panel .container .publishing-container .publish-box .publish-overlay .publish-author {
+  margin-top: 0.4rem;
+  align-self: flex-end;
+  font-size: 0.8em;
+}
+
+footer {
+  background-color: #6e45e3;
+  width: 100%;
+}
+footer .container .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+@media screen and (max-width: 640px) {
+  footer .container .navbar {
+    flex-direction: column;
+  }
+}
+footer .container .navbar .logo img {
+  max-height: 36px;
+  height: auto;
+}
+@media screen and (max-width: 640px) {
+  footer .container .navbar .nav {
+    margin: 1.5rem 0;
+  }
+}
+footer .container .navbar .nav ul {
+  display: flex;
+  list-style-type: none;
+}
+footer .container .navbar .nav ul li {
+  padding: 0.5rem 1.6rem;
+  transition: all 0.2s;
+  border-radius: 4px;
+}
+footer .container .navbar .nav ul li:hover {
+  background-color: rgba(240, 240, 240, 0.2);
+  cursor: pointer;
+}
+footer .container .navbar .nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+footer .container .copyright {
+  padding: 1rem 0 2rem 0;
+  color: white;
+  text-align: center;
+}
+footer .container .copyright a {
+  color: white;
+}
