@@ -34,10 +34,10 @@ header {
           height: auto;
         }
       }
-      .hamburger{
+      .hamburger {
         // border: 2px solid red;
         display: none;
-        i{
+        i {
           color: white;
           font-size: 1.5rem;
         }
@@ -70,7 +70,7 @@ header {
         }
       }
 
-      .show-nav{
+      .show-nav {
         z-index: 100;
         display: block;
         position: absolute;
@@ -81,13 +81,12 @@ header {
         left: 0;
         right: 0;
         padding: 4rem 0;
-        ul{
+        ul {
           flex-direction: column;
           align-items: center;
           justify-content: center;
           row-gap: 2rem;
-          li{
-            
+          li {
           }
         }
       }
@@ -188,6 +187,70 @@ main {
                 opacity: 1;
               }
             }
+          }
+        }
+      }
+      .writing-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        .writing-form-header {
+        }
+        form {
+          margin: 2rem 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          background: url("../img/wall-3.jpeg");
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          height: 260px;
+          width: 100%;
+          max-width: 500px;
+
+          padding: 0 2rem;
+          .wall-text {
+            width: 100%;
+            height: 50%;
+            background: transparent;
+            outline: none;
+            border: none;
+            font-size: 1rem;
+            &::placeholder {
+              font-size: 1rem;
+              font-weight: bold;
+              color: black;
+            }
+          }
+          .wall-author {
+            margin-top: 1rem;
+            align-self: flex-end;
+            background: transparent;
+            outline: none;
+            border: none;
+            font-size: 1rem;
+            &::placeholder {
+              font-weight: 900;
+              color: black;
+            }
+          }
+        }
+        .wall-btn{
+          outline: none;
+          border: none;
+          font-size: 1.4rem;
+          padding: 0.4rem 1.4rem;
+          border-radius: 4px;
+          background-color: #6e45e3;
+          color: white;
+          cursor: pointer;
+          transition: all 0.4s;
+          &:hover{
+            box-shadow: 4px 4px black;
+                  transform: scale(1.05);
           }
         }
       }
